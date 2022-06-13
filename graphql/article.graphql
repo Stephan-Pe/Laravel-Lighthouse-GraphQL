@@ -5,9 +5,4 @@ type Article {
   author: User! @belongsTo(relation: "user")
 }
 
-type Query {
-  user(id: ID! @eq): User @find
-  users: [User!]! @paginate
-  article(id: ID! @eq): Article @find
-  articles: [Article!]! @paginate
-}
+

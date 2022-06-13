@@ -1,22 +1,8 @@
+#import user.graphql
+
 #import article.graphql
 
 #import auth.graphql
-
-type User {
-  id: ID!
-  name: String!
-  email: String!
-  articles: [Article!]!
-}
-
-type Mutation {
-  createUser(
-    name: String!
-    email: String! @rules(apply: ["email", "unique:users"])
-    password: String! @hash @rules(apply: ["min:6"])
-  ): User @create
-}
-
 
 
 
